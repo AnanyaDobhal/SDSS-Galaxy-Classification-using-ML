@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Input Page • SDSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{background:#f6f7f9;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:900px;margin:24px auto;padding:0 16px}
+    .title{background:#3b3f44;color:#fff;font-weight:800;border-radius:6px;padding:10px 16px}
+    table{width:100%;border-collapse:collapse;background:#fff;margin-top:16px;border:1px solid #e5e7eb;border-radius:6px;overflow:hidden}
+    th,td{padding:10px 12px;border-bottom:1px solid #f0f2f5}
+    thead th{background:#f3f4f6;text-align:left}
+    input[type=number]{width:250px;padding:8px;border:1px solid #cfd3d7;border-radius:6px}
+    .actions{margin-top:12px}
+    .btn{background:#2563eb;border:0;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer}
+    .btn:hover{background:#1d4ed8}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title">SDSS Galaxy Classification using Machine Learning</div>
+
+    <form action="{{ url_for('predict') }}" method="post">
+      <table>
+        <thead>
+          <tr><th>columns</th><th>Input</th></tr>
+        </thead>
+        <tbody>
+          {% for col in features %}
+          <tr>
+            <td>{{ col }}</td>
+            <td>
+              <input type="number" step="any" name="{{ col }}"
+                     value="{{ defaults.get(col, '') if defaults else '' }}" required>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="actions">
+        <button class="btn" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
