@@ -1,5 +1,11 @@
 # 🌌 Sloan Digital Sky Survey (SDSS) Galaxy Classification using Machine Learning
 
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)](https://flask.palletsprojects.com/)
+[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?logo=scikitlearn)](https://scikit-learn.org/)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue?logo=kaggle)](https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18)
+[![License](https://img.shields.io/badge/License-MIT-green)]()
+
 ### 🧠 Category: Machine Learning  
 **Skills Used:** Python | Flask | Data Visualization | Data Preprocessing | Machine Learning | HTML | TensorFlow  
 
@@ -120,7 +126,7 @@ Users can enter photometric parameters manually into the form as shown below:
    ```bash
    http://127.0.0.1:5000/
 
-##📁 Project Structure
+## 📁 Project Structure
    ```bash
 SDSS-Galaxy-Classification/
 │
@@ -138,5 +144,3 @@ SDSS-Galaxy-Classification/
 ├── app.py
 |── README.md
 
-##👨‍💻 Author
-Project by: Ananya Dobhal
